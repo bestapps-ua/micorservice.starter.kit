@@ -7,7 +7,7 @@
     },
     "cache": {
         "type": "memory",
-        "prefix": "micro:money",
+        "prefix": "micro:YOURSERVICENAME",
         "models": [],
         "redis": {
             "connection": {
@@ -19,7 +19,7 @@
         }
     },
     "broker": {
-        "nodeID": "node-money",
+        "nodeID": "node-YOURSERVICENAME",
         "logLevel": "debug",
         "transporter": {
             "type": "redis",
@@ -31,6 +31,6 @@
         }
     },
     "services": {
-        "app": "money"
+        "app": "YOURSERVICENAME"
     }
 }
