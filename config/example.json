@@ -1,0 +1,36 @@
+{
+    "db": {
+        "host": "localhost",
+        "name": "",
+        "user": "",
+        "password": ""
+    },
+    "cache": {
+        "type": "memory",
+        "prefix": "micro:money",
+        "models": [],
+        "redis": {
+            "connection": {
+                "port": "6379",
+                "host": "localhost",
+                "login": "",
+                "password": ""
+            }
+        }
+    },
+    "broker": {
+        "nodeID": "node-money",
+        "logLevel": "debug",
+        "transporter": {
+            "type": "redis",
+            "disableOfflineNodeRemoving": true,
+            "disableHeartbeatChecks": true,
+            "redis": {
+                "port": 6379
+            }
+        }
+    },
+    "services": {
+        "app": "money"
+    }
+}
