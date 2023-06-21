@@ -1,5 +1,4 @@
 {
-    "main": "src/index.ts",
     "dependencies": {
         "@bestapps/raks-sql": "1.0.15",
         "@bestapps/microservice-entity": "1.0.5",
@@ -25,5 +24,15 @@
         "prod": "tsc --skipLibCheck && node ./dist/index.js",
         "test": "NODE_ENV= jest",
         "unit": "npm run test --runInBand --detectOpenHandles --forceExit"
-    }
+    },
+    "version": "1.0.0",
+    "keywords": [
+        "sql",
+        "orm",
+        "entity",
+        "redis",
+        "moleculer",
+        "microservice",
+        "mysql"
+    ]
 }
