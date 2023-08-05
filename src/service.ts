@@ -1,9 +1,11 @@
 import sql from "./model/SQLModel";
 
 let config = require('config');
+import globalEventModel from "@bestapps/microservice-entity/dist/model/event/GlobalEventModel";
 
 import {ServiceSchema} from "moleculer";
 import RegistryModel from "@bestapps/microservice-entity/dist/model/RegistryModel";
+import {EVENT_SQL_CONNECTED} from "@bestapps/microservice-entity/dist/model";
 
 const AppService: ServiceSchema | any = {
     name: config.services.app,
@@ -17,7 +19,6 @@ const AppService: ServiceSchema | any = {
 
     created() {
         // Fired when the service instance created (with `broker.loadService` or `broker.createService`)
-
     },
 
     async started() {
@@ -27,8 +28,9 @@ const AppService: ServiceSchema | any = {
                     console.log('[ERR SQL CONNECTION]', err);
                     return reject();
                 }
+                globalEventModel.getEmitter().emit(EVENT_SQL_CONNECTED, {});
                 console.log('STARTED');
-                resolve();
+                resolve(undefined);
             });
         });
     },
