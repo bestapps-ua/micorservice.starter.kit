@@ -1,7 +1,7 @@
 import broker from './broker';
 
-let configModel = require('@bestapps/microservice-entity').model.configModel;
-let RegistryModel = require('@bestapps/microservice-entity').model.RegistryModel;
+import configModel from '@bestapps/microservice-entity/dist/model/ConfigModel';
+import RegistryModel from '@bestapps/microservice-entity/dist/model/RegistryModel';
 
 let config = require('config');
 

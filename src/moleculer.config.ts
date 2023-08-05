@@ -1,4 +1,5 @@
-import {entity} from '@bestapps/microservice-entity';
+import Entity from "@bestapps/microservice-entity/dist/entity/Entity";
+
 let config = require('config');
 
 let transporterType = config.broker.transporter.type.toLowerCase();
@@ -35,7 +36,7 @@ module.exports = {
                             return d;
                         }
 */
-                        if(res instanceof entity.Entity) return res.allData;
+                        if(res instanceof Entity) return res.allData;
 
                         if(Array.isArray(res)){
                             let data = [];

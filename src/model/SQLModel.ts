@@ -1,5 +1,5 @@
 'use strict';
-let RegistryModel = require('@bestapps/microservice-entity').model.RegistryModel;
+import RegistryModel from '@bestapps/microservice-entity/dist/model/RegistryModel';
 let config = require('config');
 
 let sql = RegistryModel.get('sql');
